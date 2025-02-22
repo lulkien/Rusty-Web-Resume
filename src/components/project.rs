@@ -9,5 +9,5 @@ pub struct ProjectItem {
     pub description: Option<String>,
     pub date_range: String,
     pub website: Option<String>,
-    pub sumary: Option<String>,
+    pub summary: Option<String>,
 }

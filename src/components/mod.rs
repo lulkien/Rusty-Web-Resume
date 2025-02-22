@@ -1,25 +1,29 @@
+mod contact_info;
 mod education;
 mod interest;
 mod language;
-mod personal_info;
 mod project;
 mod skill;
 mod summary;
 
-use project::{ProjectItem, Projects};
 use serde::{Deserialize, Serialize};
 
+use contact_info::ContactInfo;
 use education::{Education, EducationItem};
 use interest::Interests;
 use language::{LanguageItem, Languages};
-use personal_info::{CustomPersonalInfo, PersonalInfo};
+use project::{ProjectItem, Projects};
 use skill::{SkillItem, Skills};
 use summary::Summary;
 
+pub trait AsHtml {
+    fn as_html(&self) -> yew::Html;
+}
+
 #[derive(Serialize, Deserialize)]
 pub struct Resume {
-    pub personal_info: PersonalInfo,
-    pub sumary: Option<Summary>,
+    pub contact_info: ContactInfo,
+    pub summary: Option<Summary>,
     pub education: Option<Education>,
     pub skills: Option<Skills>,
     pub projects: Option<Projects>,
@@ -31,8 +35,9 @@ impl Resume {
     #[allow(unused)]
     pub fn dummy() -> Self {
         Self {
-            personal_info: PersonalInfo {
+            contact_info: ContactInfo {
                 fullname: "Luu Hoang Kien".to_string(),
+                avatar: None,
                 title: Some(
                     "Software Developer".to_string(),
                 ),
@@ -41,19 +46,14 @@ impl Resume {
                         .to_string(),
                 ),
                 website: Some("cv.lulkien.cc".to_string()),
+                github: Some("lulkien".to_string()),
+                linkedin: Some("kienlh-dev".to_string()),
                 phone: Some("+84988449631".to_string()),
-                localtion: Some(
+                location: Some(
                     "Hanoi, Vietnam".to_string(),
                 ),
-                custom_field: Some(vec![
-                    CustomPersonalInfo {
-                        name: "Github".to_string(),
-                        data: "https://github.com/lulkien"
-                            .to_string(),
-                    },
-                ]),
             },
-            sumary: Some(Summary(
+            summary: Some(Summary(
                 "Results-driven Software Developer with \
                  proficiency in C++ and Qt framework. \
                  Specialized in in-vehicle infotainment, \
@@ -85,7 +85,7 @@ Passionate about Linux and specializing in crafting \
                                     October 2020"
                         .to_string(),
                     score: None,
-                    sumary: None,
+                    summary: None,
                     website: None,
                 },
             ])),
@@ -132,7 +132,7 @@ Passionate about Linux and specializing in crafting \
                     date_range: "May 2024 - June 2024".to_string(),
                     description: None,
                     website: None,
-                    sumary: Some("Maintain and enhance the car \
+                    summary: Some("Maintain and enhance the car \
                         navigation system for a major Japanese client.
     - Utilize expertise in automotive software and customer-specific \
                         requirements.
@@ -144,7 +144,7 @@ Passionate about Linux and specializing in crafting \
                     date_range: "January 2024 - March 2024".to_string(),
                     description: None,
                     website: None,
-                    sumary: Some("Develop a HMI layer for the \
+                    summary: Some("Develop a HMI layer for the \
                         cluster of a new luxury car model that \
                         will be on the market in the near future. 
     - Developed Charging Manager application. ".to_string()),
@@ -154,7 +154,7 @@ Passionate about Linux and specializing in crafting \
                     date_range: "July 2023 - December 2023".to_string(),
                     description: None,
                     website: None,
-                    sumary: Some("Develop the applications for \
+                    summary: Some("Develop the applications for \
                         the new Cockpit system that was exhibited \
                         at CES2024.
     - Developed Navigation Application. 
@@ -168,7 +168,7 @@ Passionate about Linux and specializing in crafting \
                     date_range: "December 2020 - June 2023".to_string(),
                     description: None,
                     website: None,
-                    sumary: Some("Maintain HMI layer applications \
+                    summary: Some("Maintain HMI layer applications \
                         for an automotive AVN system for high-end cars.
     - Maintained and implemented new features for Home Screen Application.
     - Elevated the user experience of the Settings Application by \
@@ -180,7 +180,7 @@ Passionate about Linux and specializing in crafting \
                     date_range: "Ongoing".to_string(),
                     description: Some("Personal project".to_string()),
                     website: Some("https://github.com/lulkien/sonant".to_string()),
-                    sumary: Some("Sonant is a simple C++ wrapper for \
+                    summary: Some("Sonant is a simple C++ wrapper for \
                         recording audio with ALSA and transcribing \
                         with Whisper.cpp library.".to_string()),
                 },

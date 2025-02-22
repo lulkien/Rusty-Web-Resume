@@ -1,4 +1,4 @@
-sumary = """Results-driven Software Developer with proficiency in C++ and Qt framework. Specialized in in-vehicle infotainment, \
+summary = """Results-driven Software Developer with proficiency in C++ and Qt framework. Specialized in in-vehicle infotainment, \
 I bring expertise in developing robust applications that seamlessly integrate innovative features and enhance user experiences.
 Passionate about Linux and specializing in crafting automation scripts, I find joy in operating within a Linux environment. \
 My focus is on refining workflows to ensure seamless and efficient operations."""
@@ -8,15 +8,17 @@ interests = [
   "Learn to design PCB and develop firmware in free time.",
 ]
 
-[personal_info]
+[contact_info]
 fullname = "Luu Hoang Kien"
 title = "Software Developer"
 email = "kien.luuhoang.arch@outlook.com"
 website = "cv.lulkien.cc"
+github = "lulkien"
+linkedin = "kienlh-dev"
 phone = "+84988449631"
-localtion = "Hanoi, Vietnam"
+location = "Hanoi, Vietnam"
 
-[[personal_info.custom_field]]
+[[contact_info.custom_field]]
 name = "Github"
 data = "https://github.com/lulkien"
 
@@ -25,6 +27,7 @@ institution = "University of Engineering and Technology"
 degree = "Bachelor degree"
 area_of_study = "Electronic and Telecommunication"
 date_range = "September 2016 - October 2020"
+website = "https://adguard.lulkien.cc"
 
 [[skills]]
 name = "C++"

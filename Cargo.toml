@@ -8,7 +8,18 @@ log = "0.4.26"
 serde = { version = "1.0.218", features = ["derive"] }
 toml = "0.8.20"
 wasm-logger = "0.2.0"
-yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+yew = { version = "0.21.0", features = ["csr"] }
+yew_icons = { version = "0.8.0", features = [
+  "BootstrapAt",
+  "BootstrapEnvelope",
+  "BootstrapTelephone",
+  "BootstrapGithub",
+  "BootstrapLink45Deg",
+  "BootstrapLinkedin",
+  "BootstrapGlobe2",
+  "OcticonsLocation16",
+  "LucideArrowLeftCircle",
+] }
 
 [dev-dependencies]
 trunk = "0.21" # Add Trunk as a dev dependency
