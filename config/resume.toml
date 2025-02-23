@@ -30,24 +30,23 @@ date_range = "September 2016 - October 2020"
 
 [[skills]]
 name = "C++"
+description = "4+ years of C++ experience in automotive and fintech industries."
 
 [[skills]]
 name = "Rust"
+description = "Rust hobbyist, learning through open-source contributions and personal projects."
 
 [[skills]]
 name = "Qt Framework"
+description = "4+ years of Qt framework experience, primarily in automotive applications."
 
 [[skills]]
 name = "GNU/Linux"
+description = "Linux user in professional and personal projects, homelab enthusiast with solid hands-on experience."
 
 [[skills]]
 name = "Shell scripting"
-
-[[skills]]
-name = "SQL"
-
-[[skills]]
-name = "Git"
+description = "Experienced in shell scripting, creating tools for work and personal projects."
 
 [[projects]]
 name = "SNaviBox"

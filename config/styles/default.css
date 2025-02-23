@@ -70,7 +70,9 @@ ul {
 
 /* ========================== Components ========================== */
 .summary,
-.education {
+.education,
+.skills,
+.projects {
   margin: 0px 10px;
 }
 
@@ -135,4 +137,15 @@ ul {
   text-align: left;
 }
 
-/* -------------------------- Project -------------------------- */
+/* -------------------------- Skills -------------------------- */
+
+.skill-name {
+  font-weight: bold;
+  margin: 0px 0px 0px 0px;
+}
+
+.skill-description {
+  margin: 0px 0px 8px 0px;
+}
+
+/* -------------------------- Projects -------------------------- */
