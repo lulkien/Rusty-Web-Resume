@@ -51,7 +51,6 @@ ul {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
   margin: 6px 0px;
 }
 
@@ -171,6 +170,7 @@ ul {
 
 .project-keywords,
 .project-description,
+.project-source-code,
 .project-website {
   margin: 5px 0px 0px 0px;
 }
@@ -178,7 +178,6 @@ ul {
 /* -------------------------- Interests -------------------------- */
 
 .interest-item {
-  font-size: 15px;
   font-weight: bold;
-  margin: 8px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
 }

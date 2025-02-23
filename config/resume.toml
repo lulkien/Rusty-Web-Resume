@@ -3,8 +3,9 @@ Passionate about Rust, Linux, and shell scripting, with a strong ability to opti
 Eager to contribute to innovative projects, grow professionally, and take on new challenges in a collaborative environment."""
 
 interests = [
+  "Configure and setup homelab",
   "Customize GNU/Linux's desktop environment.",
-  "Learn to design PCB and develop firmware in free time.",
+  "Design PCB and develop firmware.",
 ]
 
 [contact_info]
@@ -87,7 +88,7 @@ keywords = ["C++", "Qt", "Automotive"]
 [[projects]]
 name = "Sonant"
 date_range = "Ongoing"
-website = "https://github.com/lulkien/sonant"
+source_code = "https://github.com/lulkien/sonant"
 description = "Sonant is a simple C++ wrapper for recording audio with ALSA and transcribing with Whisper.cpp library."
 keywords = ["C++", "speech-to-text", "voice processing"]
 
