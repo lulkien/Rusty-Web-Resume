@@ -1,15 +1,6 @@
-::root {
-  --text-color: #4c4f69;
-  --link-color: #04a5e5;
-  --link-hovered-color: #1e66f5;
-  --icon-color: #e64553;
-  --title-color: #04a5e5;
-}
-
 * {
-  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #4c4f69;
+  /* color: #4c4f69; */
   font-size: 14px;
 }
 
@@ -25,6 +16,7 @@ ul {
   margin: 20px auto;
   padding: 20px 25px;
   background-color: #eff1f5;
+  color: #4c4f69;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -42,6 +34,7 @@ ul {
 }
 
 .clickable-link {
+  color: #4c4f69;
   text-decoration: none;
 }
 
@@ -51,7 +44,7 @@ ul {
 }
 
 .icon {
-  color: red;
+  color: #fe640b;
 }
 
 .icon-info {
@@ -150,6 +143,7 @@ ul {
 }
 
 /* -------------------------- Projects -------------------------- */
+
 .project-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -175,7 +169,16 @@ ul {
   margin: 8px 0px 0px 0px;
 }
 
+.project-keywords,
 .project-description,
 .project-website {
   margin: 5px 0px 0px 0px;
+}
+
+/* -------------------------- Interests -------------------------- */
+
+.interest-item {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 8px 0px 0px 0px;
 }

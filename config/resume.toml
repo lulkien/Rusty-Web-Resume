@@ -51,12 +51,14 @@ highlights = [
   "Utilize expertise in automotive software and customer-specific requirements.",
   "Collaborate with cross-functional teams to implement new features and improvements.",
 ]
+keywords = ["C++", "Qt", "Automotive"]
 
 [[projects]]
 name = "POIP.Cluster"
 date_range = "January 2024 - March 2024"
 description = """Develop a HMI layer for the cluster of a new luxury car model that will be on the market in the near future."""
 highlights = ["Developed Charging Manager application."]
+keywords = ["C++", "Qt", "Automotive"]
 
 [[projects]]
 name = "Cockpit2024"
@@ -69,6 +71,7 @@ highlights = [
   "Configured Linux environment.",
   "Automated build and release process with shell scripting.",
 ]
+keywords = ["C++", "Qt", "R&D", "GNU/Linux"]
 
 [[projects]]
 name = "Gen5.Premium"
@@ -79,12 +82,14 @@ highlights = [
   "Elevated the user experience of the Settings Application by revamping and optimizing the search function.",
   "Provide solutions to problems for other features.",
 ]
+keywords = ["C++", "Qt", "Automotive"]
 
 [[projects]]
 name = "Sonant"
 date_range = "Ongoing"
 website = "https://github.com/lulkien/sonant"
 description = "Sonant is a simple C++ wrapper for recording audio with ALSA and transcribing with Whisper.cpp library."
+keywords = ["C++", "speech-to-text", "voice processing"]
 
 [[languages]]
 name = "Vietnamese"
