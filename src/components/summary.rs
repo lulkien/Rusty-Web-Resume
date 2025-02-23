@@ -11,7 +11,7 @@ impl AsHtml for Summary {
         html! {
             <div class="summary">
                 <h2 class="section-title">{ "Summary" }</h2>
-                <p>{ self.0.as_str() }</p>
+                <p class="summary-content">{ self.0.as_str() }</p>
             </div>
         }
     }

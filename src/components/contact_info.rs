@@ -53,8 +53,8 @@ impl ContactInfo {
 
     fn render_contact_info(&self) -> Html {
         html!(
-            <div style="padding: 20px;">
-                <h1 class="section-title fullname">{ self.fullname.as_str() }</h1>
+            <div style="padding: 10px;">
+                <h1 class="fullname">{ self.fullname.as_str() }</h1>
                 { self.render_title() }
                 { self.render_location() }
                 { self.render_email() }
@@ -74,68 +74,55 @@ impl ContactInfo {
     fn render_location(&self) -> Html {
         self.location.as_ref().map_or_else(|| html!(), |location| html!(
             <p class="icon-info">
-                <Icon icon_id={IconId::OcticonsLocation16} width={"1.2em".to_owned()} height={"1.2em".to_owned()} />
+                { Self::get_info_icon(IconId::OcticonsLocation16) }
                 { location.as_str() }
             </p>
         ))
     }
 
     fn render_email(&self) -> Html {
-        self.email.as_ref().map_or_else(|| html!(), |email| {
-            html!(
-                <p class="icon-info">
-                    <Icon icon_id={IconId::BootstrapEnvelope} width={"1.2em".to_owned()} height={"1.2em".to_owned()} />
-                    <a class="clickable-link" href={ format!("mailto:{}", email.as_str()) }> { email.as_str() } </a>
-                </p>
-            )
-        })
+        self.email.as_ref().map_or_else(|| html!(), |email| html!(
+            <p class="icon-info">
+                { Self::get_info_icon(IconId::BootstrapEnvelope) }
+                <a class="clickable-link" href={ format!("mailto:{}", email.as_str()) }> { email.as_str() } </a>
+            </p>
+        ))
     }
 
     fn render_phone(&self) -> Html {
-        self.phone.as_ref().map_or_else(|| html!(), |phone| {
-            html!(
-                <p class="icon-info">
-                    <Icon icon_id={IconId::BootstrapTelephone} width={"1.2em".to_owned()} height={"1.2em".to_owned()} />
-                    <a class="clickable-link" href={ format!("tel:{}", phone.as_str()) }> { phone.as_str() } </a>
-                </p>
-            )
-        })
+        self.phone.as_ref().map_or_else(|| html!(), |phone| html!(
+            <p class="icon-info">
+                { Self::get_info_icon(IconId::BootstrapTelephone) }
+                <a class="clickable-link" href={ format!("tel:{}", phone.as_str()) }> { phone.as_str() } </a>
+            </p>
+        ))
     }
 
     fn render_website(&self) -> Html {
-        self.website.as_ref().map_or_else(|| html!(), |website| {
-            let url = Self::get_website_url(website);
-            html!(
-                <p class="icon-info">
-                    <Icon icon_id={IconId::BootstrapGlobe2} width={"1.2em".to_owned()} height={"1.2em".to_owned()} />
-                    <a class="clickable-link" href={ url }> { website.as_str() } </a>
-                </p>
-            )
-        })
+        self.website.as_ref().map_or_else(|| html!(), |website| html!(
+            <p class="icon-info">
+                { Self::get_info_icon(IconId::BootstrapGlobe2) }
+                <a class="clickable-link" href={ Self::get_website_url(website) }> { website.as_str() } </a>
+            </p>
+        ))
     }
 
     fn render_linkedin(&self) -> Html {
-        self.linkedin.as_ref().map_or_else(|| html!(), |linkedin| {
-            let url = Self::get_linkedin_url(linkedin);
-            html!(
-                <p class="icon-info">
-                    <Icon icon_id={IconId::BootstrapLinkedin} width={"1.2em".to_owned()} height={"1.2em".to_owned()} />
-                    <a class="clickable-link" href={ url }> { linkedin.as_str() } </a>
-                </p>
-            )
-        })
+        self.linkedin.as_ref().map_or_else(|| html!(), |linkedin| html!(
+            <p class="icon-info">
+                { Self::get_info_icon(IconId::BootstrapLinkedin) }
+                <a class="clickable-link" href={ Self::get_linkedin_url(linkedin) }> { linkedin.as_str() } </a>
+            </p>
+        ))
     }
 
     fn render_github(&self) -> Html {
-        self.github.as_ref().map_or_else(|| html!(), |github| {
-            let url = Self::get_github_url(github);
-            html!(
-                <p class="icon-info">
-                    <Icon icon_id={IconId::BootstrapGithub} width={"1.2em".to_owned()} height={"1.2em".to_owned()} />
-                    <a class="clickable-link" href={ url }> { github.as_str() } </a>
-                </p>
-            )
-        })
+        self.github.as_ref().map_or_else(|| html!(), |github| html!(
+            <p class="icon-info">
+                { Self::get_info_icon(IconId::BootstrapGithub) }
+                <a class="clickable-link" href={ Self::get_github_url(github) }> { github.as_str() } </a>
+            </p>
+        ))
     }
 
     fn get_website_url(website: &str) -> String {
@@ -154,5 +141,11 @@ impl ContactInfo {
 
     fn get_github_url(github: &str) -> String {
         format!("https://github.com/{}", github)
+    }
+
+    fn get_info_icon(ico: IconId) -> Html {
+        html!(
+            <Icon class="icon" icon_id={ico} width={"1.1em".to_owned()} height={"1.1em".to_owned()}/>
+        )
     }
 }

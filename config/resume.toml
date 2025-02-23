@@ -1,7 +1,6 @@
-summary = """Results-driven Software Developer with proficiency in C++ and Qt framework. Specialized in in-vehicle infotainment, \
-I bring expertise in developing robust applications that seamlessly integrate innovative features and enhance user experiences.
-Passionate about Linux and specializing in crafting automation scripts, I find joy in operating within a Linux environment. \
-My focus is on refining workflows to ensure seamless and efficient operations."""
+summary = """Software engineer with expertise in C++ and Qt, experienced in both Automotive and Fintech domains.
+Passionate about Rust, Linux, and shell scripting, with a strong ability to optimize workflows and build efficient, scalable systems.
+Eager to contribute to innovative projects, grow professionally, and take on new challenges in a collaborative environment."""
 
 interests = [
   "Customize GNU/Linux's desktop environment.",
@@ -18,16 +17,16 @@ linkedin = "kienlh-dev"
 phone = "+84988449631"
 location = "Hanoi, Vietnam"
 
-[[contact_info.custom_field]]
-name = "Github"
-data = "https://github.com/lulkien"
-
 [[education]]
 institution = "University of Engineering and Technology"
 degree = "Bachelor degree"
 area_of_study = "Electronic and Telecommunication"
 date_range = "September 2016 - October 2020"
-website = "https://adguard.lulkien.cc"
+# website = "https://uet.vnu.edu.vn"
+# summary = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore \
+# et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea \
+# commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla \
+# pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."""
 
 [[skills]]
 name = "C++"

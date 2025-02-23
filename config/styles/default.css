@@ -1,0 +1,138 @@
+::root {
+  --text-color: #4c4f69;
+  --link-color: #04a5e5;
+  --link-hovered-color: #1e66f5;
+  --icon-color: #e64553;
+  --title-color: #04a5e5;
+}
+
+* {
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #4c4f69;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #04a5e5;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* ========================== Common ========================== */
+
+.cv-container {
+  width: 794px;
+  margin: 20px auto;
+  padding: 20px 25px;
+  background-color: #eff1f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  margin: 15px 0px 5px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.separate-line {
+  height: 1px;
+  margin: 0px 5px;
+  background-color: #04a5e5;
+}
+
+.clickable-link {
+  text-decoration: none;
+}
+
+.clickable-link:hover {
+  color: #1e66f5;
+  text-decoration: underline;
+}
+
+.icon {
+  color: red;
+}
+
+.icon-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 6px 0px;
+}
+
+/* ========================== Components ========================== */
+.summary,
+.education {
+  margin: 0px 10px;
+}
+
+/* -------------------------- Contact Info -------------------------- */
+.fullname {
+  color: var(--text-color);
+  margin: 0px;
+  font-size: 25px;
+}
+
+.job-title {
+  font-size: 16px;
+  margin-top: 0px;
+}
+
+/* -------------------------- Summary -------------------------- */
+.summary-content {
+  margin: 0px;
+  line-height: 1.2;
+  white-space: pre-wrap;
+  text-align: left;
+  font-size: 15px;
+}
+
+/* -------------------------- Education -------------------------- */
+.education-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.education-info-left {
+  justify-self: start;
+  text-align: left;
+}
+
+.education-info-right {
+  justify-self: end;
+  text-align: right;
+}
+
+.institution,
+.date-range {
+  font-weight: bold;
+  margin: 0px 0px 3px 0px;
+}
+
+.area-of-study,
+.degree {
+  margin: 0px;
+}
+
+.education-website {
+  margin: 10px 0px 0px 0px;
+}
+
+.education-summary {
+  margin: 5px 0px 0px 0px;
+  line-height: 1.2;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+/* -------------------------- Project -------------------------- */

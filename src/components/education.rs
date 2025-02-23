@@ -19,28 +19,57 @@ pub struct EducationItem {
 
 impl AsHtml for Education {
     fn as_html(&self) -> yew::Html {
-        let education_items: Vec<Html> = self.0
+        let education_items: Vec<Html> = self
+            .0
             .iter()
-            .map(|item| {
-                html! {
-                    <div class="education-item">
-                        <h3>{ &item.institution }</h3>
-                        { item.degree.as_ref().map(|degree| html! { <p><strong>{ "Degree: " }</strong>{ degree }</p> }) }
-                        { item.area_of_study.as_ref().map(|area| html! { <p><strong>{ "Area of Study: " }</strong>{ area }</p> }) }
-                        <p><strong>{ "Date Range: " }</strong>{ &item.date_range }</p>
-                        { item.score.map(|score| html! { <p><strong>{ "Score: " }</strong>{ score }</p> }) }
-                        { item.website.as_ref().map(|website| html! { <p><strong>{ "Website: " }</strong><a href={ website.clone() }>{ website }</a></p> }) }
-                        { item.summary.as_ref().map(|summary| html! { <p><strong>{ "Summary: " }</strong>{ summary }</p> }) }
-                    </div>
-                }
-            })
+            .map(|item| item.as_html())
             .collect();
 
         html! {
-            <div class="education-section">
-                <h2>{ "Education" }</h2>
+            <div class="education">
+                <h2 class="section-title">{ "Education" }</h2>
                 { education_items }
             </div>
         }
+    }
+}
+
+impl AsHtml for EducationItem {
+    fn as_html(&self) -> yew::Html {
+        html! (
+        <div class="education-content">
+            <div class="education-info">
+                <div class="education-info-left">
+                    <p class="institution">{ self.institution.as_str() }</p>
+                    { self
+                        .area_of_study
+                        .as_ref()
+                        .map_or_else(|| html!(), |area| html!(
+                            <p class="area-of-study">{ area.as_str() }</p>
+                        )) }
+                </div>
+                <div class="education-info-right">
+                    <p class="date-range">{ self.date_range.as_str() }</p>
+                    { self
+                        .degree
+                        .as_ref()
+                        .map_or_else(|| html!(), |degree| html!(
+                            <p class="area-of-study">{ degree.as_str() }</p>
+                        )) }
+                </div>
+            </div>
+            { self.website.as_ref().map_or_else(|| html!(), |url| html!(
+                <p class="education-website">
+                    <strong>{ "Website: " }</strong>
+                    <a class="clickable-link" href={ url.clone() }> { url.as_str() } </a>
+                </p>
+            ))}
+            { self.summary.as_ref().map_or_else(|| html!(), |summary| html!(
+                <p class="education-summary">
+                    { summary.as_str() }
+                </p>
+            ))}
+        </div>
+        )
     }
 }
