@@ -13,16 +13,9 @@
   font-size: 14px;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: #04a5e5;
-}
-
 ul {
   list-style-type: disc;
-  margin-left: 20px;
+  margin: 5px 0px 0px 0px;
 }
 
 /* ========================== Common ========================== */
@@ -36,6 +29,7 @@ ul {
 }
 
 .section-title {
+  color: #04a5e5;
   margin: 15px 0px 5px 0px;
   font-size: 18px;
   font-weight: bold;
@@ -72,14 +66,16 @@ ul {
 .summary,
 .education,
 .skills,
-.projects {
+.projects,
+.languages,
+.interests {
   margin: 0px 10px;
 }
 
 /* -------------------------- Contact Info -------------------------- */
 .fullname {
-  color: var(--text-color);
   margin: 0px;
+  font-weight: bold;
   font-size: 25px;
 }
 
@@ -90,11 +86,11 @@ ul {
 
 /* -------------------------- Summary -------------------------- */
 .summary-content {
-  margin: 0px;
   line-height: 1.2;
   white-space: pre-wrap;
   text-align: left;
   font-size: 15px;
+  margin: 8px 0px 0px 0px;
 }
 
 /* -------------------------- Education -------------------------- */
@@ -103,6 +99,7 @@ ul {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   width: 100%;
+  margin: 8px 0px 0px 0px;
 }
 
 .education-info-left {
@@ -117,8 +114,9 @@ ul {
 
 .institution,
 .date-range {
+  font-size: 15px;
   font-weight: bold;
-  margin: 0px 0px 3px 0px;
+  margin: 0px;
 }
 
 .area-of-study,
@@ -137,15 +135,47 @@ ul {
   text-align: left;
 }
 
-/* -------------------------- Skills -------------------------- */
+/* -------------------------- Skills/Languages -------------------------- */
 
-.skill-name {
+.skill-name,
+.language-name {
+  font-size: 15px;
   font-weight: bold;
-  margin: 0px 0px 0px 0px;
+  margin: 8px 0px 0px 0px;
 }
 
-.skill-description {
-  margin: 0px 0px 8px 0px;
+.skill-description,
+.language-description {
+  margin: 3px 0px 0px 0px;
 }
 
 /* -------------------------- Projects -------------------------- */
+.project-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  margin: 8px 0px 0px 0px;
+}
+
+.project-info-left {
+  align-items: center;
+  justify-self: start;
+  text-align: left;
+}
+
+.project-info-right {
+  justify-self: end;
+  text-align: right;
+}
+
+.project-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 8px 0px 0px 0px;
+}
+
+.project-description,
+.project-website {
+  margin: 5px 0px 0px 0px;
+}

@@ -22,11 +22,6 @@ institution = "University of Engineering and Technology"
 degree = "Bachelor degree"
 area_of_study = "Electronic and Telecommunication"
 date_range = "September 2016 - October 2020"
-# website = "https://uet.vnu.edu.vn"
-# summary = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore \
-# et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea \
-# commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla \
-# pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."""
 
 [[skills]]
 name = "C++"
@@ -51,40 +46,49 @@ description = "Experienced in shell scripting, creating tools for work and perso
 [[projects]]
 name = "SNaviBox"
 date_range = "May 2024 - June 2024"
-sumary = """Maintain and enhance the car navigation system for a major Japanese client.
-  - Utilize expertise in automotive software and customer-specific requirements.
-  - Collaborate with cross-functional teams to implement new features and improvements."""
+description = "Maintain and enhance the car navigation system for a major Japanese client."
+highlights = [
+  "Utilize expertise in automotive software and customer-specific requirements.",
+  "Collaborate with cross-functional teams to implement new features and improvements.",
+]
 
 [[projects]]
 name = "POIP.Cluster"
 date_range = "January 2024 - March 2024"
-sumary = """Develop a HMI layer for the cluster of a new luxury car model that will be on the market in the near future.
-  - Developed Charging Manager application. """
+description = """Develop a HMI layer for the cluster of a new luxury car model that will be on the market in the near future."""
+highlights = ["Developed Charging Manager application."]
 
 [[projects]]
 name = "Cockpit2024"
 date_range = "July 2023 - December 2023"
-sumary = """Develop the applications for the new Cockpit system that was exhibited at CES2024.
-  - Developed Navigation Application.
-  - Developed Media Player.
-  - Integrated text-to-speech feature.
-  - Configured Linux environment.
-  - Automated build and release process with shell scripting."""
+description = "Develop the applications for the new Cockpit system that was exhibited at CES2024."
+highlights = [
+  "Developed Navigation Application.",
+  "Developed Media Player.",
+  "Integrated text-to-speech feature.",
+  "Configured Linux environment.",
+  "Automated build and release process with shell scripting.",
+]
 
 [[projects]]
 name = "Gen5.Premium"
 date_range = "December 2020 - June 2023"
-sumary = """Maintain HMI layer applications for an automotive AVN system for high-end cars.
-  - Maintained and implemented new features for Home Screen Application.
-  - Elevated the user experience of the Settings Application by revamping and optimizing the search function.
-  - Provide solutions to problems for other features. """
+description = "Maintain HMI layer applications for an automotive AVN system for high-end cars."
+highlights = [
+  "Maintained and implemented new features for Home Screen Application.",
+  "Elevated the user experience of the Settings Application by revamping and optimizing the search function.",
+  "Provide solutions to problems for other features.",
+]
 
 [[projects]]
 name = "Sonant"
-description = "Personal project"
 date_range = "Ongoing"
 website = "https://github.com/lulkien/sonant"
-sumary = "Sonant is a simple C++ wrapper for recording audio with ALSA and transcribing with Whisper.cpp library."
+description = "Sonant is a simple C++ wrapper for recording audio with ALSA and transcribing with Whisper.cpp library."
+
+[[languages]]
+name = "Vietnamese"
+description = "Native"
 
 [[languages]]
 name = "English"

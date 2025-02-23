@@ -37,7 +37,7 @@ impl AsHtml for Education {
 impl AsHtml for EducationItem {
     fn as_html(&self) -> yew::Html {
         html! (
-        <div class="education-content">
+        <div>
             <div class="education-info">
                 <div class="education-info-left">
                     <p class="institution">{ self.institution.as_str() }</p>
