@@ -1,3 +1,5 @@
+use rusty_web_cv::Resume;
+
 fn main() {
-    println!("Hello, world!");
+    yew::Renderer::<Resume>::new().render();
 }

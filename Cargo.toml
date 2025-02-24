@@ -1,6 +1,28 @@
 [package]
-name = "Rusty-Web-CV"
+name = "rusty-web-cv"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+gloo = "0.11.0"
+log = "0.4.26"
+serde = { version = "1.0.218", features = ["derive"] }
+toml = "0.8.20"
+yew = { version = "0.21.0", features = ["csr"] }
+yew_icons = { version = "0.8.0", features = [
+  "BootstrapAt",
+  "BootstrapEnvelope",
+  "BootstrapTelephone",
+  "BootstrapGithub",
+  "BootstrapLink45Deg",
+  "BootstrapLinkedin",
+  "BootstrapGlobe2",
+  "OcticonsLocation16",
+  "LucideArrowLeftCircle",
+] }
+
+[dev-dependencies]
+trunk = "0.21" # Add Trunk as a dev dependency
+
+# [lib]
+# crate-type = ["cdylib", "rlib"]
