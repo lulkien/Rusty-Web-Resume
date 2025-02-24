@@ -21,7 +21,7 @@ impl AsHtml for Skills {
             .collect();
 
         html! {
-            <div class="skills">
+            <div class="skill">
                 <h2 class="section-title">{ "Skills" }</h2>
                 { skillset }
             </div>
@@ -32,8 +32,8 @@ impl AsHtml for Skills {
 impl AsHtml for SkillItem {
     fn as_html(&self) -> Html {
         html! {
-            <div>
-                <p class="skill-name">{ self.name.as_str() }</p>
+            <div class="skill-item">
+                <p class="skill-name highlight-text">{ self.name.as_str() }</p>
                 { self.description.as_ref().map_or_else(|| html!(), |description| html!(
                     <p class="skill-description">{ description }</p>
                 ))}

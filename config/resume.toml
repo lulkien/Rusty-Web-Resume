@@ -29,12 +29,12 @@ name = "C++"
 description = "4+ years of C++ experience in automotive and fintech industries."
 
 [[skills]]
-name = "Rust"
-description = "Rust hobbyist, learning through open-source contributions and personal projects."
-
-[[skills]]
 name = "Qt Framework"
 description = "4+ years of Qt framework experience, primarily in automotive applications."
+
+[[skills]]
+name = "Rust"
+description = "Rust hobbyist, learning through open-source contributions and personal projects."
 
 [[skills]]
 name = "GNU/Linux"
@@ -43,6 +43,13 @@ description = "Linux user in professional and personal projects, homelab enthusi
 [[skills]]
 name = "Shell scripting"
 description = "Experienced in shell scripting, creating tools for work and personal projects."
+
+[[projects]]
+name = "Enterprise Portfolio Accounting"
+date_range = "October 2024 - Present"
+description = "Develop and maintain a comprehensive accounting system for a leading global management firm."
+highlights = [""]
+keywords = ["C++", "SQL", "RHEL", "Fintech"]
 
 [[projects]]
 name = "SNaviBox"
@@ -57,7 +64,7 @@ keywords = ["C++", "Qt", "Automotive"]
 [[projects]]
 name = "POIP.Cluster"
 date_range = "January 2024 - March 2024"
-description = """Develop a HMI layer for the cluster of a new luxury car model that will be on the market in the near future."""
+description = "Develop a HMI layer for the cluster of a new luxury car model that will be on the market in the near future."
 highlights = ["Developed Charging Manager application."]
 keywords = ["C++", "Qt", "Automotive"]
 

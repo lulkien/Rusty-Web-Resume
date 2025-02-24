@@ -19,7 +19,7 @@ impl AsHtml for Interests {
             .collect();
 
         html! {
-            <div class="interests">
+            <div class="interest">
                 <h2 class="section-title">{ "Interests" }</h2>
                 { languages }
             </div>

@@ -37,10 +37,10 @@ impl AsHtml for Education {
 impl AsHtml for EducationItem {
     fn as_html(&self) -> Html {
         html! {
-            <div>
+            <div class="education-item">
                 <div class="education-info">
                     <div class="education-info-left">
-                        <p class="education-institution">{ self.institution.as_str() }</p>
+                        <p class="education-institution highlight-text">{ self.institution.as_str() }</p>
                         { self
                             .area_of_study
                             .as_ref()
@@ -49,7 +49,7 @@ impl AsHtml for EducationItem {
                             )) }
                     </div>
                     <div class="education-info-right">
-                        <p class="education-date-range">{ self.date_range.as_str() }</p>
+                        <p class="education-date-range highlight-text">{ self.date_range.as_str() }</p>
                         { self
                             .degree
                             .as_ref()

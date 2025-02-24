@@ -56,12 +56,12 @@ impl ContactInfo {
             <div class="contact-layout-right">
                 <h1 class="contact-fullname">{ self.fullname.as_str() }</h1>
                 { self.render_title() }
-                <div>
+                <div class="contact-mandatory">
                     { self.render_location() }
                     { self.render_email() }
                     { self.render_phone() }
                 </div>
-                <div>
+                <div class="contact-optional">
                     { self.render_github() }
                     { self.render_linkedin() }
                     { self.render_website() }

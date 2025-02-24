@@ -21,7 +21,7 @@ impl AsHtml for Languages {
             .collect();
 
         html! {
-            <div class="languages">
+            <div class="language">
                 <h2 class="section-title">{ "Languages" }</h2>
                 { languages }
             </div>
@@ -32,8 +32,8 @@ impl AsHtml for Languages {
 impl AsHtml for LanguageItem {
     fn as_html(&self) -> Html {
         html! {
-            <div>
-                <p class="language-name">{ self.name.as_str() }</p>
+            <div class="language-item">
+                <p class="language-name highlight-text">{ self.name.as_str() }</p>
                 { self.description.as_ref().map_or_else(|| html!(), |description| html!(
                     <p class="language-description">{ description }</p>
                 ))}

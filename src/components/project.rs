@@ -26,7 +26,7 @@ impl AsHtml for Projects {
             .collect();
 
         html! {
-            <div class="projects">
+            <div class="project">
                 <h2 class="section-title">{ "Projects" }</h2>
                 { projects }
             </div>
@@ -40,7 +40,9 @@ impl AsHtml for ProjectItem {
             .highlights
             .as_ref()
             .map_or(vec![], |list| {
-                list.iter()
+                list
+                    .iter()
+                    .filter(|item| !item.is_empty())
                     .map(|item| {
                         html!( <li> { item.as_str() } </li>)
                     })
@@ -60,13 +62,13 @@ impl AsHtml for ProjectItem {
             });
 
         html! {
-            <div>
+            <div class="project-item">
                 <div class="project-info">
                     <div class="project-info-left">
-                        <p class="project-name">{ self.name.as_str() }</p>
+                        <p class="project-name highlight-text">{ self.name.as_str() }</p>
                     </div>
                     <div class="project-info-right">
-                        <p class="project-date-range">{ self.date_range.as_str() }</p>
+                        <p class="project-date-range highlight-text">{ self.date_range.as_str() }</p>
                     </div>
                 </div>
                 { keywords_str }
