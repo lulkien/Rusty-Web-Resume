@@ -27,8 +27,8 @@ pub struct CustomField {
 impl AsHtml for ContactInfo {
     fn as_html(&self) -> yew::Html {
         html! {
-            <div class="contact-info">
-                <div style="display: flex; flex-wrap: wrap;">
+            <div class="contact">
+                <div class="contact-layout">
                     { self.render_avatar() }
                     { self.render_contact_info() }
                 </div>
@@ -53,27 +53,30 @@ impl ContactInfo {
 
     fn render_contact_info(&self) -> Html {
         html! {
-            <div style="padding: 10px;">
-                <h1 class="fullname">{ self.fullname.as_str() }</h1>
+            <div class="contact-layout-right">
+                <h1 class="contact-fullname">{ self.fullname.as_str() }</h1>
                 { self.render_title() }
-                { self.render_location() }
-                { self.render_email() }
-                { self.render_phone() }
-                <div style="padding-top:5px;"></div>
-                { self.render_github() }
-                { self.render_linkedin() }
-                { self.render_website() }
+                <div>
+                    { self.render_location() }
+                    { self.render_email() }
+                    { self.render_phone() }
+                </div>
+                <div>
+                    { self.render_github() }
+                    { self.render_linkedin() }
+                    { self.render_website() }
+                </div>
             </div>
         }
     }
 
     fn render_title(&self) -> Html {
-        self.title.as_ref().map_or(html!(), |title| html!(<p class="job-title">{ title.as_str() }</p>))
+        self.title.as_ref().map_or(html!(), |title| html!(<p class="contact-job-title">{ title.as_str() }</p>))
     }
 
     fn render_location(&self) -> Html {
         self.location.as_ref().map_or(html!(), |location| html! {
-            <p class="icon-info">
+            <p class="contact-item">
                 { Self::get_info_icon(IconId::OcticonsLocation16) }
                 { location.as_str() }
             </p>
@@ -82,7 +85,7 @@ impl ContactInfo {
 
     fn render_email(&self) -> Html {
         self.email.as_ref().map_or(html!(), |email| html! {
-            <p class="icon-info">
+            <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapEnvelope) }
                 <a class="clickable-link" href={ format!("mailto:{}", email.as_str()) }>
                     { email.as_str() }
@@ -93,7 +96,7 @@ impl ContactInfo {
 
     fn render_phone(&self) -> Html {
         self.phone.as_ref().map_or(html!(), |phone| html! {
-            <p class="icon-info">
+            <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapTelephone) }
                 <a class="clickable-link" href={ format!("tel:{}", phone.as_str()) }>
                     { phone.as_str() }
@@ -104,7 +107,7 @@ impl ContactInfo {
 
     fn render_website(&self) -> Html {
         self.website.as_ref().map_or(html!(), |website| html! {
-            <p class="icon-info">
+            <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapGlobe2) }
                 <a class="clickable-link" href={ Self::get_website_url(website) }>
                     { website.as_str() }
@@ -115,7 +118,7 @@ impl ContactInfo {
 
     fn render_linkedin(&self) -> Html {
         self.linkedin.as_ref().map_or(html!(), |linkedin| html! {
-            <p class="icon-info">
+            <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapLinkedin) }
                 <a class="clickable-link" href={ Self::get_linkedin_url(linkedin) }>
                     { linkedin.as_str() }
@@ -126,7 +129,7 @@ impl ContactInfo {
 
     fn render_github(&self) -> Html {
         self.github.as_ref().map_or(html!(), |github| html! {
-            <p class="icon-info">
+            <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapGithub) }
                 <a class="clickable-link" href={ Self::get_github_url(github) }>
                     { github.as_str() }
@@ -155,7 +158,7 @@ impl ContactInfo {
 
     fn get_info_icon(ico: IconId) -> Html {
         html! {
-            <Icon class="icon" icon_id={ico} width={"1.1em".to_owned()} height={"1.1em".to_owned()}/>
+            <Icon class="icon" icon_id={ico} width={"1.3em".to_owned()} height={"1.1em".to_owned()}/>
         }
     }
 }

@@ -66,7 +66,7 @@ impl AsHtml for ProjectItem {
                         <p class="project-name">{ self.name.as_str() }</p>
                     </div>
                     <div class="project-info-right">
-                        <p class="date-range">{ self.date_range.as_str() }</p>
+                        <p class="project-date-range">{ self.date_range.as_str() }</p>
                     </div>
                 </div>
                 { keywords_str }

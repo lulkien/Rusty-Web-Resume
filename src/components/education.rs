@@ -40,21 +40,21 @@ impl AsHtml for EducationItem {
             <div>
                 <div class="education-info">
                     <div class="education-info-left">
-                        <p class="institution">{ self.institution.as_str() }</p>
+                        <p class="education-institution">{ self.institution.as_str() }</p>
                         { self
                             .area_of_study
                             .as_ref()
                             .map_or_else(|| html!(), |area| html!(
-                                <p class="area-of-study">{ area.as_str() }</p>
+                                <p class="education-area-of-study">{ area.as_str() }</p>
                             )) }
                     </div>
                     <div class="education-info-right">
-                        <p class="date-range">{ self.date_range.as_str() }</p>
+                        <p class="education-date-range">{ self.date_range.as_str() }</p>
                         { self
                             .degree
                             .as_ref()
                             .map_or_else(|| html!(), |degree| html!(
-                                <p class="area-of-study">{ degree.as_str() }</p>
+                                <p class="education-degree">{ degree.as_str() }</p>
                             )) }
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 use crate::{
     components::{AsHtml, Resume},
-    parser, style,
+    parser,
 };
 
 use yew::prelude::*;
@@ -25,8 +25,6 @@ fn app() -> Html {
 
     html! {
         <>
-            <title>{ "My CV" }</title>
-            { style::get_page_style() }
             <div class="cv-container">
                 { page }
             </div>

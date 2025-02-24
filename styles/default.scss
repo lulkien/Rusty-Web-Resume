@@ -1,0 +1,205 @@
+* {
+  // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  // color: #4c4f69;
+  font-size: 14px;
+  margin: 0px;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 5px 0px 15px 0px;
+}
+
+/* ========================== Common ========================== */
+.cv-container {
+  width: 794px;
+  margin: 20px auto;
+  padding: 20px 25px;
+  background-color: #eff1f5;
+  color: #4c4f69;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  color: #04a5e5;
+  margin: 15px 0px 5px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.separate-line {
+  height: 1px;
+  margin: 0px 5px;
+  background-color: #04a5e5;
+}
+
+.clickable-link {
+  color: #4c4f69;
+  text-decoration: none;
+
+  &:hover {
+    color: #1e66f5;
+    text-decoration: underline;
+  }
+}
+
+.icon {
+  color: #fe640b;
+}
+
+/* ========================== Components ========================== */
+.summary,
+.education,
+.skills,
+.projects,
+.languages,
+.interests {
+  margin: 0px 10px;
+}
+
+/* -------------------------- Contact Info -------------------------- */
+.contact {
+  &-layout {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-left {
+      padding: 10px;
+    }
+
+    &-right {
+      margin: 0px 0px 10px 10px;
+    }
+  }
+
+  &-fullname {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  &-job-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0px;
+  }
+}
+
+
+/* -------------------------- Summary -------------------------- */
+.summary {
+  &-content {
+    line-height: 1.2;
+    white-space: pre-wrap;
+    text-align: left;
+    font-size: 15px;
+    margin: 8px 0px 0px 0px;
+  }
+}
+
+/* -------------------------- Education -------------------------- */
+.education {
+  &-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0px 0px 0px;
+
+    &-left {
+      justify-self: start;
+      text-align: left;
+    }
+
+    &-right {
+      justify-self: end;
+      text-align: right;
+    }
+  }
+
+  &-institution,
+  &-date-range {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &-area-of-study,
+  &-degree {
+    margin: 0px;
+  }
+
+  &-website {
+    margin: 10px 0px 0px 0px;
+  }
+
+  &-summary {
+    margin: 5px 0px 0px 0px;
+    line-height: 1.2;
+    white-space: pre-wrap;
+    text-align: left;
+  }
+
+}
+
+/* -------------------------- Skills/Languages -------------------------- */
+.skill-name,
+.language-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 8px 0px 0px 0px;
+}
+
+.skill-description,
+.language-description {
+  margin: 3px 0px 0px 0px;
+}
+
+/* -------------------------- Projects -------------------------- */
+.project {
+  &-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+
+    &-left {
+      align-items: center;
+      justify-self: start;
+      text-align: left;
+    }
+
+    &-right {
+      justify-self: end;
+      text-align: right;
+    }
+  }
+
+  &-name,
+  &-date-range {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &-keywords,
+  &-description,
+  &-source-code,
+  &-website {
+    margin: 5px 0px 0px 0px;
+  }
+}
+
+/* -------------------------- Interests -------------------------- */
+
+.interest {
+  &-item {
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+  }
+}
