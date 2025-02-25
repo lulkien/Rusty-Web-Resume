@@ -2,7 +2,9 @@ use serde::{Deserialize, Serialize};
 use yew::{html, Html};
 
 use super::AsHtml;
-use crate::components::{ExternalLink, SectionTitle};
+use crate::components::{
+    ExternalLink, HighlightText, SectionTitle,
+};
 
 #[derive(Serialize, Deserialize)]
 pub struct Education(pub Vec<EducationItem>);
@@ -41,7 +43,7 @@ impl AsHtml for EducationItem {
             <div class="education-item">
                 <div class="education-info">
                     <div class="education-info-left">
-                        <p class="education-institution highlight-text">{ self.institution.as_str() }</p>
+                        <HighlightText class="education-institution" text={ self.institution.to_owned() }/>
                         { self
                             .area_of_study
                             .as_ref()
@@ -50,7 +52,7 @@ impl AsHtml for EducationItem {
                             )) }
                     </div>
                     <div class="education-info-right">
-                        <p class="education-date-range highlight-text">{ self.date_range.as_str() }</p>
+                        <HighlightText class="education-date-range" text={ self.date_range.to_owned() }/>
                         { self
                             .degree
                             .as_ref()

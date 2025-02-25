@@ -3,7 +3,9 @@ use yew::{html, Html};
 use yew_icons::{Icon, IconId};
 
 use super::AsHtml;
-use crate::components::ExternalLink;
+use crate::components::{
+    ExternalLink, HeaderTitle, NormalText,
+};
 
 #[derive(Clone, Deserialize, Serialize, PartialEq)]
 pub struct ContactInfo {
@@ -55,8 +57,8 @@ impl ContactInfo {
     fn render_contact_info(&self) -> Html {
         html! {
             <div class="contact-layout-right">
-                <h1 class="section-title contact-fullname">{ self.fullname.as_str() }</h1>
-                { self.render_title() }
+                <HeaderTitle title={ self.fullname.to_owned() } />
+                <NormalText class="contact-job-title" text={ self.title.clone() } />
                 <div class="contact-mandatory">
                     { self.render_location() }
                     { self.render_email() }
@@ -69,10 +71,6 @@ impl ContactInfo {
                 </div>
             </div>
         }
-    }
-
-    fn render_title(&self) -> Html {
-        self.title.as_ref().map_or(html!(), |title| html!(<p class="contact-job-title">{ title.as_str() }</p>))
     }
 
     fn render_location(&self) -> Html {

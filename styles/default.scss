@@ -25,6 +25,13 @@ ul {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.header-title {
+  color: $text-color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .section-title {
   color: $section-color;
   font-family: 'Roboto', sans-serif;
@@ -76,11 +83,6 @@ ul {
   &-layout {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  &-fullname {
-    color: $text-color;
-    font-size: 25px;
   }
 
   &-job-title {

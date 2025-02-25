@@ -1,17 +1,17 @@
 use yew::{function_component, html, Html, Properties};
 
 #[derive(Properties, PartialEq)]
-pub struct SectionTitleProps {
-    pub title: String,
+pub struct HighlightTextProps {
+    pub text: String,
 
     #[prop_or(None)]
     pub class: Option<String>,
 }
 
-#[function_component(SectionTitle)]
-pub fn section_title(props: &SectionTitleProps) -> Html {
+#[function_component(HighlightText)]
+pub fn highlight_text(props: &HighlightTextProps) -> Html {
     let classes = format!(
-        "section-title{}",
+        "highlight-text{}",
         props
             .class
             .as_ref()
@@ -20,6 +20,8 @@ pub fn section_title(props: &SectionTitleProps) -> Html {
     );
 
     html! {
-        <h2 class={ classes }>{ &props.title }</h2>
+        <p class={ classes }>
+            { &props.text }
+        </p>
     }
 }
