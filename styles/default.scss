@@ -1,8 +1,18 @@
-$text-color: #4c4f69;
-$base-color: #eff1f5;
-$icon-color: #fe640b;
-$section-color: #04a5e5;
-$link-hover-color: #1e66f5;
+$peach: #fe640b;
+$sky: #04a5e5;
+$blue: #1e66f5;
+$text: #4c4f69;
+$base: #eff1f5;
+$mantle: #e6e9ef;
+$crust: #dce0e8;
+
+/* $peach: #fab387; */
+/* $sky: #89dceb; */
+/* $blue: #89b4fa; */
+/* $text: #cdd6f4; */
+/* $base: #1e1e2e; */
+/* $mantle: #181825; */
+/* $crust: #11111b; */
 
 * {
   font-family: 'Lato', san-serif;
@@ -15,18 +25,23 @@ ul {
   margin: 5px 0px 15px 0px;
 }
 
+body {
+  background-color: $base;
+}
+
 /* ========================== Common ========================== */
 .cv-container {
   width: 794px;
+  border-radius: 5px;
   margin: 20px auto;
   padding: 20px 25px;
-  background-color: $base-color;
-  color: $text-color;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: $mantle;
+  color: $text;
+  box-shadow: 0 0 10px rgba($text, 0.3);
 }
 
 .section-title {
-  color: $section-color;
+  color: $sky;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -35,21 +50,21 @@ ul {
 .separate-line {
   height: 1px;
   margin-top: 15px;
-  background-color: $section-color;
+  background-color: $sky;
 }
 
 .clickable-link {
-  color: $text-color;
+  color: $text;
   text-decoration: none;
 
   &:hover {
-    color: $link-hover-color;
+    color: $blue;
     text-decoration: underline;
   }
 }
 
 .icon {
-  color: $icon-color;
+  color: $peach;
 }
 
 .highlight-text {
@@ -79,7 +94,7 @@ ul {
   }
 
   &-fullname {
-    color: $text-color;
+    color: $text;
     font-size: 25px;
   }
 
