@@ -1,4 +1,4 @@
-use crate::components::Resume;
+use crate::model::Resume;
 
 const RESUME_DATA: &str =
     include_str!("../config/resume.toml");

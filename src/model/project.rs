@@ -1,6 +1,8 @@
 use serde::{Deserialize, Serialize};
 use yew::{html, Html};
 
+use crate::components::ExternalLink;
+
 use super::AsHtml;
 
 #[derive(Serialize, Deserialize)]
@@ -75,13 +77,13 @@ impl AsHtml for ProjectItem {
                 { self.source_code.as_ref().map_or(html!(), |url| html!(
                     <p class="project-source-code">
                         <strong>{ "Source: " }</strong>
-                        <a class="clickable-link" href={ url.clone() }>{ url.as_str() }</a>
+                        <ExternalLink text={ url.to_owned() } />
                     </p>
                 ))}
                 { self.website.as_ref().map_or(html!(), |url| html!(
                     <p class="project-website">
                         <strong>{ "Website: " }</strong>
-                        <a class="clickable-link" href={ url.clone() }>{ url.as_str() }</a>
+                        <ExternalLink text={ url.to_owned() } />
                     </p>
                 ))}
                 <p class="project-description">{ self.description.as_str() }</p>

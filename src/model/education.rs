@@ -2,6 +2,7 @@ use serde::{Deserialize, Serialize};
 use yew::{html, Html};
 
 use super::AsHtml;
+use crate::components::{ExternalLink, SectionTitle};
 
 #[derive(Serialize, Deserialize)]
 pub struct Education(pub Vec<EducationItem>);
@@ -27,7 +28,7 @@ impl AsHtml for Education {
 
         html! {
             <div class="education">
-                <h2 class="section-title">{ "Education" }</h2>
+                <SectionTitle title="Educations"/>
                 { education_items }
             </div>
         }
@@ -61,7 +62,7 @@ impl AsHtml for EducationItem {
                 { self.website.as_ref().map_or_else(|| html!(), |url| html!(
                     <p class="education-website">
                         <strong>{ "Website: " }</strong>
-                        <a class="clickable-link" href={ url.clone() }> { url.as_str() } </a>
+                        <ExternalLink text={ url.to_owned() } />
                     </p>
                 ))}
                 { self.summary.as_ref().map_or_else(|| html!(), |summary| html!(

@@ -3,6 +3,7 @@ use yew::{html, Html};
 use yew_icons::{Icon, IconId};
 
 use super::AsHtml;
+use crate::components::ExternalLink;
 
 #[derive(Clone, Deserialize, Serialize, PartialEq)]
 pub struct ContactInfo {
@@ -87,9 +88,9 @@ impl ContactInfo {
         self.email.as_ref().map_or(html!(), |email| html! {
             <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapEnvelope) }
-                <a class="clickable-link" href={ format!("mailto:{}", email.as_str()) }>
-                    { email.as_str() }
-                </a>
+                <ExternalLink
+                    url={ format!("mailto:{}", email) }
+                    text={ email.to_owned() } />
             </p>
         })
     }
@@ -98,20 +99,20 @@ impl ContactInfo {
         self.phone.as_ref().map_or(html!(), |phone| html! {
             <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapTelephone) }
-                <a class="clickable-link" href={ format!("tel:{}", phone.as_str()) }>
-                    { phone.as_str() }
-                </a>
+                <ExternalLink
+                    url={ format!("tel:{}", phone) }
+                    text={ phone.to_owned() } />
             </p>
         })
     }
 
     fn render_website(&self) -> Html {
-        self.website.as_ref().map_or(html!(), |website| html! {
+        self.website.as_ref().map_or(html!(), |url| html! {
             <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapGlobe2) }
-                <a class="clickable-link" href={ Self::get_website_url(website) }>
-                    { website.as_str() }
-                </a>
+                <ExternalLink
+                    url={ Self::get_website_url(url) }
+                    text={ url.to_owned() } />
             </p>
         })
     }
@@ -120,9 +121,9 @@ impl ContactInfo {
         self.linkedin.as_ref().map_or(html!(), |linkedin| html! {
             <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapLinkedin) }
-                <a class="clickable-link" href={ Self::get_linkedin_url(linkedin) }>
-                    { linkedin.as_str() }
-                </a>
+                <ExternalLink
+                    url={ Self::get_linkedin_url(linkedin) }
+                    text={ linkedin.to_owned() } />
             </p>
         })
     }
@@ -131,9 +132,9 @@ impl ContactInfo {
         self.github.as_ref().map_or(html!(), |github| html! {
             <p class="contact-item">
                 { Self::get_info_icon(IconId::BootstrapGithub) }
-                <a class="clickable-link" href={ Self::get_github_url(github) }>
-                    { github.as_str() }
-                </a>
+                <ExternalLink
+                    url={ Self::get_github_url(github) }
+                    text={ github.to_owned() } />
             </p>
         })
     }

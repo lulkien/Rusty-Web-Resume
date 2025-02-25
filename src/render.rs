@@ -1,5 +1,5 @@
 use crate::{
-    components::{AsHtml, Resume},
+    model::{AsHtml, Resume},
     parser,
 };
 
