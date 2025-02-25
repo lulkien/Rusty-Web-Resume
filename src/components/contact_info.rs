@@ -54,7 +54,7 @@ impl ContactInfo {
     fn render_contact_info(&self) -> Html {
         html! {
             <div class="contact-layout-right">
-                <h1 class="contact-fullname">{ self.fullname.as_str() }</h1>
+                <h1 class="section-title contact-fullname">{ self.fullname.as_str() }</h1>
                 { self.render_title() }
                 <div class="contact-mandatory">
                     { self.render_location() }

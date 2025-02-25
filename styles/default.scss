@@ -5,9 +5,8 @@ $section-color: #04a5e5;
 $link-hover-color: #1e66f5;
 
 * {
-  // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: 'Lato', san-serif;
+  font-size: 15px;
   margin: 0px;
 }
 
@@ -28,6 +27,7 @@ ul {
 
 .section-title {
   color: $section-color;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
@@ -53,7 +53,7 @@ ul {
 }
 
 .highlight-text {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -79,12 +79,12 @@ ul {
   }
 
   &-fullname {
-    font-weight: bold;
+    color: $text-color;
     font-size: 25px;
   }
 
   &-job-title {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   &-item {
@@ -107,7 +107,6 @@ ul {
     line-height: 1.2;
     white-space: pre-wrap;
     text-align: left;
-    font-size: 15px;
     margin-top: 10px;
   }
 }
