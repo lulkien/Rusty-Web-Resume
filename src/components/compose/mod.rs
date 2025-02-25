@@ -1,1 +1,2 @@
-pub mod contact_info;
+pub mod icon_link;
+pub mod icon_text;

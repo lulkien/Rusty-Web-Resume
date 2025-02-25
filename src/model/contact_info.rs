@@ -1,10 +1,10 @@
 use serde::{Deserialize, Serialize};
 use yew::{html, Html};
-use yew_icons::{Icon, IconId};
+use yew_icons::IconId;
 
 use super::AsHtml;
 use crate::components::{
-    ExternalLink, HeaderTitle, NormalText,
+    HeaderTitle, IconLink, IconText, NormalText,
 };
 
 #[derive(Clone, Deserialize, Serialize, PartialEq)]
@@ -60,81 +60,32 @@ impl ContactInfo {
                 <HeaderTitle title={ self.fullname.to_owned() } />
                 <NormalText class="contact-job-title" text={ self.title.clone() } />
                 <div class="contact-mandatory">
-                    { self.render_location() }
-                    { self.render_email() }
-                    { self.render_phone() }
+                    <IconText icon_id={ IconId::OcticonsLocation16 } text={ self.location.clone() } />
+                    <IconLink
+                        icon_id={ IconId::BootstrapEnvelope }
+                        text={ self.email.clone() }
+                        url={ format!("mailto:{}", self.email.clone().unwrap_or_default() ) } />
+                    <IconLink
+                        icon_id={ IconId::BootstrapTelephone }
+                        text={ self.phone.clone() }
+                        url={ format!("tel:{}", self.phone.clone().unwrap_or_default() ) } />
                 </div>
                 <div class="contact-optional">
-                    { self.render_github() }
-                    { self.render_linkedin() }
-                    { self.render_website() }
+                    <IconLink
+                        icon_id={ IconId::BootstrapGithub }
+                        text={ self.github.clone() }
+                        url={ Self::get_github_url(&self.github.clone().unwrap_or_default()) } />
+                    <IconLink
+                        icon_id={ IconId::BootstrapLinkedin }
+                        text={ self.linkedin.clone() }
+                        url={ Self::get_linkedin_url(&self.linkedin.clone().unwrap_or_default()) } />
+                    <IconLink
+                        icon_id={ IconId::BootstrapLink45Deg }
+                        text={ self.website.clone() }
+                        url={ Self::get_website_url(&self.website.clone().unwrap_or_default()) } />
                 </div>
             </div>
         }
-    }
-
-    fn render_location(&self) -> Html {
-        self.location.as_ref().map_or(html!(), |location| html! {
-            <p class="contact-item">
-                { Self::get_info_icon(IconId::OcticonsLocation16) }
-                { location.as_str() }
-            </p>
-        })
-    }
-
-    fn render_email(&self) -> Html {
-        self.email.as_ref().map_or(html!(), |email| html! {
-            <p class="contact-item">
-                { Self::get_info_icon(IconId::BootstrapEnvelope) }
-                <ExternalLink
-                    url={ format!("mailto:{}", email) }
-                    text={ email.to_owned() } />
-            </p>
-        })
-    }
-
-    fn render_phone(&self) -> Html {
-        self.phone.as_ref().map_or(html!(), |phone| html! {
-            <p class="contact-item">
-                { Self::get_info_icon(IconId::BootstrapTelephone) }
-                <ExternalLink
-                    url={ format!("tel:{}", phone) }
-                    text={ phone.to_owned() } />
-            </p>
-        })
-    }
-
-    fn render_website(&self) -> Html {
-        self.website.as_ref().map_or(html!(), |url| html! {
-            <p class="contact-item">
-                { Self::get_info_icon(IconId::BootstrapGlobe2) }
-                <ExternalLink
-                    url={ Self::get_website_url(url) }
-                    text={ url.to_owned() } />
-            </p>
-        })
-    }
-
-    fn render_linkedin(&self) -> Html {
-        self.linkedin.as_ref().map_or(html!(), |linkedin| html! {
-            <p class="contact-item">
-                { Self::get_info_icon(IconId::BootstrapLinkedin) }
-                <ExternalLink
-                    url={ Self::get_linkedin_url(linkedin) }
-                    text={ linkedin.to_owned() } />
-            </p>
-        })
-    }
-
-    fn render_github(&self) -> Html {
-        self.github.as_ref().map_or(html!(), |github| html! {
-            <p class="contact-item">
-                { Self::get_info_icon(IconId::BootstrapGithub) }
-                <ExternalLink
-                    url={ Self::get_github_url(github) }
-                    text={ github.to_owned() } />
-            </p>
-        })
     }
 
     fn get_website_url(website: &str) -> String {
@@ -153,11 +104,5 @@ impl ContactInfo {
 
     fn get_github_url(github: &str) -> String {
         format!("https://github.com/{}", github)
-    }
-
-    fn get_info_icon(ico: IconId) -> Html {
-        html! {
-            <Icon class="icon" icon_id={ico} width={"1.3em".to_owned()} height={"1.1em".to_owned()}/>
-        }
     }
 }

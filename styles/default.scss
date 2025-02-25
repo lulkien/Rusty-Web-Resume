@@ -59,6 +59,13 @@ ul {
   color: $icon-color;
 }
 
+.icon-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0px;
+}
+
 .highlight-text {
   font-size: 16px;
   font-weight: bold;
@@ -87,13 +94,6 @@ ul {
 
   &-job-title {
     font-size: 17px;
-  }
-
-  &-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 6px 0px;
   }
 
   &-mandatory,

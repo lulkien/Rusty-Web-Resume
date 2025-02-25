@@ -7,3 +7,6 @@ pub type ExternalLink = common::external_link::ExternalLink;
 pub type HighlightText =
     common::highlight_text::HighlightText;
 pub type NormalText = common::normal_text::NormalText;
+
+pub type IconLink = compose::icon_link::IconLink;
+pub type IconText = compose::icon_text::IconText;
