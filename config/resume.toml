@@ -1,18 +1,17 @@
-summary = """Software engineer with expertise in C++ and Qt, experienced in both Automotive and Fintech domains.
-Passionate about Rust, Linux, and shell scripting, with a strong ability to optimize workflows and build efficient, scalable systems.
-Eager to contribute to innovative projects, grow professionally, and take on new challenges in a collaborative environment."""
-
+summary = """Software engineer with expertise in C++ and Qt across Automotive and Fintech.
+Hands-on practitioner of Rust, Linux, and systems programming, with extensive homelab experience in networking and infrastructure.
+Driven to build efficient systems and tackle complex challenges in a collaborative environment.
+"""
 interests = [
-  "Configure and setup homelab",
-  "Customize GNU/Linux's desktop environment.",
-  "Design PCB and develop firmware.",
+  "Designing and administering secure, segmented homelab environments.",
+  "Optimizing Linux workflows through desktop environment customization and scripting.",
+  "Designing PCBs and developing low-level firmware for embedded devices.",
 ]
 
 [contact_info]
 fullname = "Luu Hoang Kien"
 title = "Software Developer"
 email = "kien.luuhoang.arch@outlook.com"
-# website = "cv.lulkien.cc"
 github = "lulkien"
 linkedin = "kienlh-dev"
 phone = "+84988449631"
@@ -24,80 +23,101 @@ degree = "Bachelor degree"
 area_of_study = "Electronic and Telecommunication"
 date_range = "September 2016 - October 2020"
 
-[[skills]]
-name = "C++"
-description = "4+ years of C++ experience in automotive and fintech industries."
+[[experience]]
+name = "FPT Software"
+position = "C++ Developer"
+date_range = "Dec 2020 - Jun 2024"
+
+[[experience]]
+name = "Rikkei Soft"
+position = "C++ Developer"
+date_range = "Jul 2024 - Present"
 
 [[skills]]
-name = "Qt Framework"
-description = "4+ years of Qt framework experience, primarily in automotive applications."
+name = "Programming Languages"
+description = "C++ (4+ years, Automotive & Fintech), Rust (Hobbyist, Open-Source)"
 
 [[skills]]
-name = "Rust"
-description = "Rust hobbyist, learning through open-source contributions and personal projects."
+name = "Frameworks & Libraries"
+description = "Qt Framework (4+ years, Automotive)"
 
 [[skills]]
-name = "GNU/Linux"
-description = "Linux user in professional and personal projects, homelab enthusiast with solid hands-on experience."
+name = "Systems & Administration"
+description = "GNU/Linux, Shell Scripting"
 
 [[skills]]
-name = "Shell scripting"
-description = "Experienced in shell scripting, creating tools for work and personal projects."
+name = "Networking & Infrastructure"
+description = "VLANs, Firewall, Network Segmentation, VPNs, Proxmox"
 
 [[projects]]
 name = "Enterprise Portfolio Accounting"
-date_range = "October 2024 - Present"
+date_range = "Jul 2024 - Present"
 description = "Develop and maintain a comprehensive accounting system for a leading global management firm."
-highlights = [""]
-keywords = ["C++", "SQL", "RHEL", "Fintech"]
+highlights = [
+  "Develop and maintain the core accounting system for a global asset management portfolio.",
+  "Implement critical code changes to meet strict financial compliance and business requirements.",
+  "Ensure system reliability and data integrity through proactive monitoring and troubleshooting.",
+]
+# keywords = ["C++", "SQL", "RHEL", "Fintech"]
 
 [[projects]]
 name = "SNaviBox"
-date_range = "May 2024 - June 2024"
+date_range = "May 2024 - Jun 2024"
 description = "Maintain and enhance the car navigation system for a major Japanese client."
 highlights = [
   "Utilize expertise in automotive software and customer-specific requirements.",
   "Collaborate with cross-functional teams to implement new features and improvements.",
 ]
-keywords = ["C++", "Qt", "Automotive"]
+# keywords = ["C++", "Qt", "Automotive"]
 
 [[projects]]
 name = "POIP.Cluster"
-date_range = "January 2024 - March 2024"
-description = "Develop a HMI layer for the cluster of a new luxury car model that will be on the market in the near future."
-highlights = ["Developed Charging Manager application."]
-keywords = ["C++", "Qt", "Automotive"]
+date_range = "Jan 2024 - Mar 2024"
+description = "Designed and implemented the HMI software layer for a new luxury vehicle's digital cockpit, delivering a high-performance user experience."
+highlights = [
+  "Engineered Navigation and Media Player applications from concept to functional demonstration",
+  "Integrated text-to-speech (TTS) engine for critical audio alerts and features",
+  "Automated build/release pipelines through shell scripting to accelerate development",
+  "Optimized Linux OS configuration for enhanced system stability and performance",
+]
+# keywords = ["C++", "Qt", "Automotive"]
 
 [[projects]]
 name = "Cockpit2024"
-date_range = "July 2023 - December 2023"
-description = "Develop the applications for the new Cockpit system that was exhibited at CES2024."
+date_range = "Jul 2023 - Dec 2023"
+description = "Developed core applications for a next-generation automotive cockpit system, including the Navigation and Media Player modules from concept to demonstration."
 highlights = [
-  "Developed Navigation Application.",
-  "Developed Media Player.",
-  "Integrated text-to-speech feature.",
-  "Configured Linux environment.",
-  "Automated build and release process with shell scripting.",
+  "Engineered the Navigation and Media Player applications for a production-ready infotainment platform.",
+  "Integrated a text-to-speech (TTS) engine to deliver critical audio alerts and features.",
+  "Automated build and release pipelines using shell scripting to accelerate development.",
+  "Configured and optimized the underlying Linux OS for system stability and performance.",
 ]
-keywords = ["C++", "Qt", "R&D", "GNU/Linux"]
+# keywords = ["C++", "Qt", "R&D", "GNU/Linux"]
 
 [[projects]]
 name = "Gen5.Premium"
-date_range = "December 2020 - June 2023"
-description = "Maintain HMI layer applications for an automotive AVN system for high-end cars."
+date_range = "Dec 2020 - Jun 2023"
+description = "Maintained and enhanced HMI layer for high-end automotive AVN systems, focusing on UX and feature development."
 highlights = [
-  "Maintained and implemented new features for Home Screen Application.",
-  "Elevated the user experience of the Settings Application by revamping and optimizing the search function.",
-  "Provide solutions to problems for other features.",
+  "Owned development and maintenance of core Home Screen application",
+  "Revamped Settings search functionality, improving usability and performance",
+  "Resolved complex issues across the HMI platform through expert troubleshooting",
 ]
-keywords = ["C++", "Qt", "Automotive"]
+# keywords = ["C++", "Qt", "Automotive"]
 
 [[projects]]
-name = "Sonant"
-date_range = "Ongoing"
+name = "Sonant Library"
+date_range = "Personal Project"
 source_code = "https://github.com/lulkien/sonant"
-description = "Sonant is a simple C++ wrapper for recording audio with ALSA and transcribing with Whisper.cpp library."
-keywords = ["C++", "speech-to-text", "voice processing"]
+description = "Lightweight C++ utility that captures audio via the ALSA API and transcribes it in real-time using the Whisper.cpp library."
+# keywords = ["C++", "speech-to-text", "voice processing"]
+
+[[projects]]
+name = "Rusty Web Resume"
+date_range = "Personal Project"
+source_code = "https://github.com/lulkien/Rusty-Web-Resume"
+demo = "https://resume.lulkien.com"
+description = "Single-page web application resume using Rust and the Yew framework."
 
 [[languages]]
 name = "Vietnamese"

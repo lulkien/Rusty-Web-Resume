@@ -1,5 +1,5 @@
 [package]
-name = "Rusty-Web-CV"
+name = "Rusty-Web-Resume"
 version = "0.1.0"
 edition = "2021"
 
@@ -12,17 +12,17 @@ yew = { version = "0.21.0", features = ["csr"] }
 yew_icons = { version = "0.8.0", features = [
   "BootstrapAt",
   "BootstrapEnvelope",
-  "BootstrapTelephone",
   "BootstrapGithub",
+  "BootstrapGlobe2",
   "BootstrapLink45Deg",
   "BootstrapLinkedin",
-  "BootstrapGlobe2",
-  "OcticonsLocation16",
+  "BootstrapTelephone",
   "LucideArrowLeftCircle",
+  "OcticonsLocation16",
 ] }
 
 [dev-dependencies]
-trunk = "0.21" # Add Trunk as a dev dependency
+trunk = "0.21"  # Add Trunk as a dev dependency
 
 # [lib]
 # crate-type = ["cdylib", "rlib"]

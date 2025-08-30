@@ -13,6 +13,7 @@ pub struct ProjectItem {
     pub date_range: String,
     pub source_code: Option<String>,
     pub website: Option<String>,
+    pub demo: Option<String>,
     pub keywords: Option<Vec<String>>,
     pub highlights: Option<Vec<String>>,
 }
@@ -81,6 +82,12 @@ impl AsHtml for ProjectItem {
                 { self.website.as_ref().map_or(html!(), |url| html!(
                     <p class="project-website">
                         <strong>{ "Website: " }</strong>
+                        <a class="clickable-link" href={ url.clone() }>{ url.as_str() }</a>
+                    </p>
+                ))}
+                { self.demo.as_ref().map_or(html!(), |url| html!(
+                    <p class="project-demo">
+                        <strong>{ "Demo: " }</strong>
                         <a class="clickable-link" href={ url.clone() }>{ url.as_str() }</a>
                     </p>
                 ))}

@@ -44,7 +44,7 @@ pub fn footer() -> Html {
                     {"Yew"}
                 </a>
                 {"  |  Source code on "}
-                <a href="https://github.com/lulkien/Rusty-Web-CV" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/lulkien/Rusty-Web-Resume" target="_blank" rel="noopener noreferrer">
                     {"GitHub"}
                 </a>
             </p>

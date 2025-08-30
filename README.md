@@ -1,2 +1,2 @@
-# Rusty-Web-CV
+# Rusty-Web-Resume
 T.B.D

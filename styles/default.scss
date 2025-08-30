@@ -38,7 +38,11 @@ $crust: #dce0e8;
 
 ul {
   list-style-type: disc;
-  margin: 5px 0px 15px 0px;
+  margin: 10px 0px 20px 0px;
+}
+
+li {
+  margin: 5px 0;
 }
 
 body {
@@ -188,6 +192,7 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     width: 100%;
+    margin-top: 10px;
 
     &-left {
       align-items: center;
@@ -204,6 +209,7 @@ body {
   &-keywords,
   &-description,
   &-source-code,
+  &-demo,
   &-website {
     margin-top: 5px;
   }

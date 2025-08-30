@@ -5,6 +5,7 @@ mod language;
 mod project;
 mod skill;
 mod summary;
+mod experience;
 
 use serde::{Deserialize, Serialize};
 
