@@ -38,7 +38,7 @@ $crust: #dce0e8;
 
 ul {
   list-style-type: disc;
-  margin: 10px 0px 20px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 li {
@@ -95,14 +95,16 @@ body {
 /* ========================== Components ========================== */
 .summary,
 .education,
+.experience,
 .skill,
 .project,
 .language,
 .interest {
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
   &-item {
-    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -142,7 +144,7 @@ body {
     line-height: 1.2;
     white-space: pre-wrap;
     text-align: left;
-    margin-top: 10px;
+    /* margin-top: 5px; */
   }
 }
 
@@ -177,6 +179,26 @@ body {
   }
 }
 
+/* -------------------------- Experience -------------------------- */
+.experience {
+  &-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+
+    &-left {
+      justify-self: start;
+      text-align: left;
+    }
+
+    &-right {
+      justify-self: end;
+      text-align: right;
+    }
+  }
+}
+
 /* -------------------------- Skills/Languages -------------------------- */
 .skill,
 .language {
@@ -192,7 +214,7 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     width: 100%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 
     &-left {
       align-items: center;

@@ -21,17 +21,17 @@ location = "Hanoi, Vietnam"
 institution = "University of Engineering and Technology"
 degree = "Bachelor degree"
 area_of_study = "Electronic and Telecommunication"
-date_range = "September 2016 - October 2020"
+date_range = "Sep 2016 - Oct 2020"
 
 [[experience]]
-name = "FPT Software"
+company = "Rikkei Soft"
+position = "C++ Developer"
+date_range = "Oct 2024 - Present"
+
+[[experience]]
+company = "FPT Software"
 position = "C++ Developer"
 date_range = "Dec 2020 - Jun 2024"
-
-[[experience]]
-name = "Rikkei Soft"
-position = "C++ Developer"
-date_range = "Jul 2024 - Present"
 
 [[skills]]
 name = "Programming Languages"
@@ -51,36 +51,31 @@ description = "VLANs, Firewall, Network Segmentation, VPNs, Proxmox"
 
 [[projects]]
 name = "Enterprise Portfolio Accounting"
-date_range = "Jul 2024 - Present"
-description = "Develop and maintain a comprehensive accounting system for a leading global management firm."
+date_range = "Oct 2024 - Present"
+description = "Engineered and maintained a high-performance, mission-critical accounting system for a multi-billion dollar global asset management firm."
 highlights = [
   "Develop and maintain the core accounting system for a global asset management portfolio.",
   "Implement critical code changes to meet strict financial compliance and business requirements.",
   "Ensure system reliability and data integrity through proactive monitoring and troubleshooting.",
 ]
-# keywords = ["C++", "SQL", "RHEL", "Fintech"]
 
 [[projects]]
 name = "SNaviBox"
 date_range = "May 2024 - Jun 2024"
-description = "Maintain and enhance the car navigation system for a major Japanese client."
+description = "Enhanced and maintained the navigation platform for a major Japanese automotive client, utilizing C++."
 highlights = [
   "Utilize expertise in automotive software and customer-specific requirements.",
   "Collaborate with cross-functional teams to implement new features and improvements.",
 ]
-# keywords = ["C++", "Qt", "Automotive"]
 
 [[projects]]
 name = "POIP.Cluster"
 date_range = "Jan 2024 - Mar 2024"
-description = "Designed and implemented the HMI software layer for a new luxury vehicle's digital cockpit, delivering a high-performance user experience."
+description = "Developed and implemented the graphical user interface (GUI) for a next-generation digital instrument vehicle cluster."
 highlights = [
-  "Engineered Navigation and Media Player applications from concept to functional demonstration",
-  "Integrated text-to-speech (TTS) engine for critical audio alerts and features",
-  "Automated build/release pipelines through shell scripting to accelerate development",
-  "Optimized Linux OS configuration for enhanced system stability and performance",
+  "Developed the Charging Manager front-end, creating key driver information displays.",
+  "Ensured compliance with automotive performance standards in a resource-constrained embedded system.",
 ]
-# keywords = ["C++", "Qt", "Automotive"]
 
 [[projects]]
 name = "Cockpit2024"
@@ -92,7 +87,6 @@ highlights = [
   "Automated build and release pipelines using shell scripting to accelerate development.",
   "Configured and optimized the underlying Linux OS for system stability and performance.",
 ]
-# keywords = ["C++", "Qt", "R&D", "GNU/Linux"]
 
 [[projects]]
 name = "Gen5.Premium"
@@ -103,14 +97,12 @@ highlights = [
   "Revamped Settings search functionality, improving usability and performance",
   "Resolved complex issues across the HMI platform through expert troubleshooting",
 ]
-# keywords = ["C++", "Qt", "Automotive"]
 
 [[projects]]
-name = "Sonant Library"
+name = "Sonant"
 date_range = "Personal Project"
 source_code = "https://github.com/lulkien/sonant"
-description = "Lightweight C++ utility that captures audio via the ALSA API and transcribes it in real-time using the Whisper.cpp library."
-# keywords = ["C++", "speech-to-text", "voice processing"]
+description = "Lightweight C++ library that captures audio via the ALSA API and transcribes it in real-time using the Whisper.cpp."
 
 [[projects]]
 name = "Rusty Web Resume"

@@ -14,6 +14,7 @@ fn app() -> Html {
         Some(resume.contact_info.as_html()),
         resume.summary.as_ref().map(|s| s.as_html()),
         resume.education.as_ref().map(|e| e.as_html()),
+        resume.experience.as_ref().map(|e| e.as_html()),
         resume.projects.as_ref().map(|p| p.as_html()),
         resume.skills.as_ref().map(|s| s.as_html()),
         resume.languages.as_ref().map(|l| l.as_html()),
