@@ -29,8 +29,8 @@ impl AsHtml for ContactInfo {
         html! {
             <div class="contact">
                 <div class="contact-layout">
-                    { self.render_avatar() }
                     { self.render_contact_info() }
+                    { self.render_avatar() }
                 </div>
                 <div class="separate-line"></div>
             </div>
@@ -40,10 +40,11 @@ impl AsHtml for ContactInfo {
 
 impl ContactInfo {
     fn render_avatar(&self) -> Html {
-        if let Some(_avatar) = &self.avatar {
+        if let Some(avatar) = &self.avatar {
+            let avatar_path = format!("assets/{avatar}");
             html! {
-                <div style="padding: 20px;">
-                    { "Left Section" }
+                <div class="contact-layout-right">
+                    <img src={avatar_path} alt="avatar image" width=144 height=187/>
                 </div>
             }
         } else {
@@ -53,7 +54,7 @@ impl ContactInfo {
 
     fn render_contact_info(&self) -> Html {
         html! {
-            <div class="contact-layout-right">
+            <div class="contact-layout-left">
                 <h1 class="section-title contact-fullname">{ self.fullname.as_str() }</h1>
                 { self.render_title() }
                 <div class="contact-mandatory">

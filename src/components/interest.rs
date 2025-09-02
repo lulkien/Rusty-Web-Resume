@@ -8,7 +8,7 @@ pub struct Interests(pub Vec<String>);
 
 impl AsHtml for Interests {
     fn as_html(&self) -> Html {
-        let languages: Vec<Html> = self
+        let interest: Vec<Html> = self
             .0
             .iter()
             .map(|item| {
@@ -21,7 +21,7 @@ impl AsHtml for Interests {
         html! {
             <div class="interest">
                 <h2 class="section-title">{ "Interests" }</h2>
-                { languages }
+                { interest }
             </div>
         }
     }

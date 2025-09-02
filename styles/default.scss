@@ -111,12 +111,26 @@ body {
 /* -------------------------- Contact Info -------------------------- */
 .contact {
   &-layout {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+
+    &-left {
+      justify-self: start;
+      text-align: left;
+      margin-left: 20px;
+    }
+
+    &-right {
+      justify-self: end;
+      align-items: center;
+      margin-right: 20px;
+    }
   }
 
   &-fullname {
-    color: $text;
+    color: $sky;
     font-size: 25px;
   }
 
@@ -241,7 +255,7 @@ body {
 
 .interest {
   &-item {
-    font-weight: bold;
+    /* font-weight: bold; */
     margin-top: 5px;
   }
 }

@@ -75,7 +75,7 @@ impl AsHtml for ProjectItem {
                 { keywords_str }
                 { self.source_code.as_ref().map_or(html!(), |url| html!(
                     <p class="project-source-code">
-                        <strong>{ "Source: " }</strong>
+                        <strong>{ "Source code: " }</strong>
                         <a class="clickable-link" href={ url.clone() }>{ url.as_str() }</a>
                     </p>
                 ))}

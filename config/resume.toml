@@ -16,6 +16,7 @@ github = "lulkien"
 linkedin = "kienlh-dev"
 phone = "+84988449631"
 location = "Hanoi, Vietnam"
+avatar = "avatar.jpg"
 
 [[education]]
 institution = "University of Engineering and Technology"
